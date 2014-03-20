@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>DebridMax Chrome Extension: Popup</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="content_script.js"></script>
+	<script type="text/javascript" src="popup.js"></script>
+	<style type="text/css">
+		@import url("./styles/main.css");
+		.container {width: 200px; margin:10px; padding: 10px auto;}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="loader">
+			<img id="loader" alt="loader" /> Loading your login details... 
+		</div>
+		<div id="logindetails" style="display:inline;">
+			<div id="dm_details" class="align-center">
+				<p class="login_details" id="user"></p>
+				<p class="login_details" id="type"></p>
+				<p class="login_details" id="point"></p>
+				<p class="login_details" id="premium"></p>
+			</div>
+			<div class="align-center"><a href="#" id="subWindow" class="btn btn-danger"></a></div>
+		</div>
+	</div>
+</body>
+</html>
