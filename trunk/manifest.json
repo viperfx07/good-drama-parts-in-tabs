@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "GoodDrama - Parts In Tabs",
+  "description": "No more clicking to the next parts. All parts areloaded into tabs ",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "http://www.gooddrama.net/"
+  ]
+}
