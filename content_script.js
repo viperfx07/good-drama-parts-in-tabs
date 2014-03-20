@@ -1,17 +1,3 @@
-//foreach a in vmargin
-// $('.vmargin li a').each(function(i){
-	
-// 	if(i == 0)
-// 	{
-// 		$('.vmargin').remove();
-
-// 	}
-// 	$("#streams").append("<div class='viperfx07-playlist-'" + (i+1) + ">Playlist</div>");
-
-// 	$.get($(this).prop('href'),function(data){
-// 		$('#viperfx07-playlist-'+(i+1)).append($('.vmargin',data).html());
-// 	})
-// });
 var x = $('.vmargin');
 
 //remove all the vmargin, because we will create a new playlist
@@ -40,19 +26,16 @@ x.each(function(i){
 
 		$.get(videoUrl,function(data){
 			//get the iframe which is a sibling of li that contains <a href='this.href'>
-			console.log($('li a[href="' + videoUrl + '"]',data).parent().next().html());
-		
-
-			//$(".viperfx07-playlist-" + index).append("<div id='tabs-" + index + "-" + index1 + "'>" + $(this).prop('href') + "</div>");
+			var divcontainiframe = $('li a[href="' + videoUrl + '"]',data).parent().parent().parent().next();
+			
+			$(".viperfx07-playlist-" + index).append("<div id='tabs-" + index + "-" + index1 + "'>" + $(divcontainiframe).html() + "</div>");
+			//if all the links done		
+			if(j == aCount-1)
+			{
+				//apply tabs script for the playlist
+				$(".viperfx07-playlist-" + index).tabs();
+			}
 		});
-
-
-		//if all the links done		
-		if(j == aCount-1)
-		{
-			//apply tabs script for the playlist
-			$(".viperfx07-playlist-" + index).tabs();
-		}
 	});
 });
 
