@@ -16,8 +16,8 @@
   ],
   "content_scripts": [ {
       "all_frames": true,
-      "css": [  ],
-      "js": [ "jquery.min.js", "content_script.js"],
+      "css": [ "jquery.ui.core.css", "jquery.ui.tabs.css" ],
+      "js": [ "jquery.min.js", "jquery-ui.min.js" , "content_script.js"],
       "matches": [ "http://www.gooddrama.net/*", "https://www.gooddrama.net/*" ]
    }],
    "icons": {
